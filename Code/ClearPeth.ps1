@@ -9,7 +9,7 @@ if (Test-Path $folderPath -PathType Container) {
     # Удаление всех файлов в папке
     Get-ChildItem -Path $folderPath -File | Remove-Item -Force -ErrorAction SilentlyContinue
 
-    # Удаление всех папок в папке
+    # Удаление всех папок и файлов в папке, с подавлением ошибок
     Get-ChildItem -Path $folderPath -Directory | Remove-Item -Recurse -Force -ErrorAction SilentlyContinue
 
     Write-Host "Папка успешно очищена!" -ForegroundColor Green

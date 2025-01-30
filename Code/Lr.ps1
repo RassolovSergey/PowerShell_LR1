@@ -11,7 +11,7 @@ if (Test-Path $folderPath -PathType Container) {
     # Проверяем количество файлов
     if ($files.Count -lt 2) {
         Write-Host "Ошибка! Недостаточно файлов для выполнения скрипта." -ForegroundColor Red
-        exit 1 
+        exit
     }
     else {
         # Вывод
